@@ -1,0 +1,4 @@
+/* 
+    sockets configuration file
+*/
+// dependencies
