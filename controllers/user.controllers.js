@@ -1,5 +1,5 @@
 /* 
-
+  User path request controller
 */
 // dependencies
 const { updateSubmitValidationHandler } = require('../helpers/validation');

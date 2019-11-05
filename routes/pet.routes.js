@@ -5,7 +5,7 @@ const {
   addNewPet,
   updatePet,
   removePet
-} = require('../controllers/petsController');
+} = require('../controllers/pet.controller');
 
 router.post('/', addNewPet);
 router

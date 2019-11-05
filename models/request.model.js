@@ -15,8 +15,12 @@ const RequestSchema = new Schema({
     default: 'pending'
   },
   date: { type: String, required: true },
-  start_time: { type: String, required: true },
-  type: { type: String, enum: ['1 Hour Walk', 'House Sit', 'Boarding'] }
+  start_time: { type: String },
+  type: {
+    type: String,
+    enum: ['1 Hour Walk', 'House Sit', 'Boarding'],
+    required: true
+  }
 });
 
 // export model

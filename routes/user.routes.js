@@ -4,7 +4,7 @@ const router = express.Router();
 const {
   getProfile,
   updateProfile
-} = require('../controllers/usersControllers');
+} = require('../controllers/user.controllers');
 router
   .route('/')
   .get(getProfile)

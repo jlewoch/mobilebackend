@@ -31,7 +31,7 @@ app.use(
 );
 
 // set routes
-app.use('/auth', require('./routes/authRoutes'));
+app.use('/auth', require('./routes/auth.routes'));
 app.use('/api', checkToken, require('./routes'));
 
 // start server

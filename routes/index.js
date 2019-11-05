@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 /* GET home page. */
-router.use('/user', require('./usersRoutes'));
-router.use('/pet', require('./petRoutes'));
+router.use('/user', require('./user.routes'));
+router.use('/pet', require('./pet.routes'));
+router.use('/request', require('./request.routes'));
 
 module.exports = router;

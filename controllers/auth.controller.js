@@ -42,7 +42,6 @@ auth.login = async (req, res) => {
       get users hashed password 
       make sure it is not case sensitive when looking by email
     */
-
     let current = await User.findOne({
       email: new RegExp(email, 'i')
     }).select('password');
@@ -61,5 +60,5 @@ auth.login = async (req, res) => {
   }
 };
 
-// export handler
+// export controller
 module.exports = auth;
