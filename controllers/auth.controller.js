@@ -15,12 +15,15 @@ const auth = {};
 // signup
 auth.signup = async (req, res) => {
   try {
+    // confirm city is barrie if not throw error
+    if (req.fields.city.toLowercase() !== 'barrie') throw Error('Invalid City entered')
     //  create new instance of user
     this.user = new User(req.fields);
     // validate fields provided and throw generic error messege if there is an error
     updateSubmitValidationHandler(this.user);
     // save if there is no error
     await this.user.save();
+    // @TODO send notificatoin to admin 
     // return response
     res.sendStatus(201);
   } catch (error) {
